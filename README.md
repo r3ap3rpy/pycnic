@@ -41,3 +41,13 @@ import requests
 requests.post(url="http://127.0.0.1:8000/?arg=asdasd&arg2=asdasda",data=json.dumps({"a":"b"})).text
 #'{"request_data": {"a": "b"}, "ip": "127.0.0.1", "method": "POST", "args": {"arg": "asdasd", "arg2": "asdasda"}, "json_args": {}, "header": null, "a": "b"}'
 ```
+
+###### Third
+
+To run this example you need to issue the following command.
+
+``` bash
+gunicorn error_handling:app
+```
+
+You can check the browser on the **http://127.0.0.1:8000/** link.

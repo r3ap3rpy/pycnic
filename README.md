@@ -42,7 +42,7 @@ requests.post(url="http://127.0.0.1:8000/?arg=asdasd&arg2=asdasda",data=json.dum
 #'{"request_data": {"a": "b"}, "ip": "127.0.0.1", "method": "POST", "args": {"arg": "asdasd", "arg2": "asdasda"}, "json_args": {}, "header": null, "a": "b"}'
 ```
 
-###### Third
+##### Third
 
 To run this example you need to issue the following command.
 
@@ -51,3 +51,35 @@ gunicorn error_handling:app
 ```
 
 You can check the browser on the **http://127.0.0.1:8000/** link.
+
+##### Fourth
+
+To run this example use this command.
+
+``` bash
+gunicorn custom_error:app
+```
+
+After visiting the browser you should see this raw data.
+
+``` bash
+{"error": "This is my own custom error class!", "data": {"my_error_key": "my_error_value"}, "status_code": 469, "status": "469 Custom Error"}
+```
+
+##### Fifth
+
+To run this example use this command.
+
+``` bash
+gunicorn cookie_demo:app
+```
+
+In order to try this out spin up a console and issue the following in python.
+
+``` python
+import requests
+# Check the cookies sent by the client.
+requests.get(url = "http://127.0.0.1:8000/", cookies={ "My gift is this" : "Cookie" }).text
+# Send cookies to the API
+requests.post(url = "http://127.0.0.1:8000/").cookies
+```

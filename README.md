@@ -83,3 +83,21 @@ requests.get(url = "http://127.0.0.1:8000/", cookies={ "My gift is this" : "Cook
 # Send cookies to the API
 requests.post(url = "http://127.0.0.1:8000/").cookies
 ```
+
+##### Sixth
+
+In order to run this example issue the following.
+
+``` bash
+gunicorn validation:app
+```
+
+To test it out spin up a python console and execute the following.
+
+``` python
+import requests, json
+# before
+requests.post(url="http://127.0.0.1:8000/before",data=json.dumps({'name':'Daniel'})).text
+# decorator
+requests.post(url="http://127.0.0.1:8000/decorator",data=json.dumps({'name':'Daniel'})).text
+```

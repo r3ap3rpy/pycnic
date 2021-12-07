@@ -2,6 +2,8 @@
 
 This repository holds videos for my pycnic playlist on youtube.
 
+The official documentation can be found [here](http://pycnic.nullism.com/).
+
 In order to get started with this web framework you have to create a virtual environment and install the dependencies.
 
 ``` bash

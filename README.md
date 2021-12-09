@@ -116,6 +116,22 @@ After visiting the **http://127.0.0.1:8000/** you should get the following respo
 
 ``` python
 import requests
-requests.post(url="http://127.0.0.1:8000/").text
+requests.get(url="http://127.0.0.1:8000/").text
 # {"welcome": "administrator"}
+```
+
+##### Eighth
+
+In order to run the example you need to issue the following command.
+
+``` bash
+gunicorn cors:app
+```
+
+To check the output issue the following command from a python console.
+
+``` python
+import requests
+requests.get(url="http://127.0.0.1:8000/").text
+# {"message": "CORS is working!", "origin": null}
 ```

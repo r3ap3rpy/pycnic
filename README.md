@@ -103,3 +103,19 @@ requests.post(url="http://127.0.0.1:8000/before",data=json.dumps({'name':'Daniel
 # decorator
 requests.post(url="http://127.0.0.1:8000/decorator",data=json.dumps({'name':'Daniel'})).text
 ```
+
+##### Seventh
+
+In order to run this demo issue the following.
+
+``` bash
+gunicorn auth_wrapper:app
+```
+
+After visiting the **http://127.0.0.1:8000/** you should get the following response.
+
+``` python
+import requests
+requests.post(url="http://127.0.0.1:8000/").text
+# {"welcome": "administrator"}
+```

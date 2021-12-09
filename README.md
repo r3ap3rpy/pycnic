@@ -9,7 +9,7 @@ In order to get started with this web framework you have to create a virtual env
 ``` bash
 virtualenv pynic
 source pynic/bin/activate
-pip install pycnic gunicorn requests
+pip install pycnic gunicorn requests sqlalchemy
 ```
 
 ##### First
@@ -121,6 +121,8 @@ requests.get(url="http://127.0.0.1:8000/").text
 ```
 
 ##### Eighth
+
+More info about [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS).
 
 In order to run the example you need to issue the following command.
 
